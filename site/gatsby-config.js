@@ -10,18 +10,20 @@ module.exports = {
     "gatsby-plugin-sharp", 
     "gatsby-transformer-sharp", 
     {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "images",
-      "path": "./src/images/"
-    },
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "images",
+        "path": `${__dirname}/src/images/`
+      },
     __key: "images"
     }, {
     resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
-    },
-    __key: "pages"
-  }]
+      options: {
+        "name": "blog-posts",
+        "path": `${__dirname}/src/updates/`
+      },
+    __key: "blogb-posts"
+  },
+  `gatsby-transformer-remark`,
+]
 };
