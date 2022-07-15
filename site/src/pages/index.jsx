@@ -1,31 +1,35 @@
 import * as React from 'react';
+import { Link } from "gatsby"
 import Layout from '../components/layout';
 
 function IndexPage() {
   return (
     <Layout>
-      <div className="flex items-center h-64 bg-gray-500 justify-center">
-        <div className="text-4xl">
-          Hero block
-        </div>
+      <div className="flex items-center h-64 bg-gray-500 justify-left bg-hero bg-cover bg-center">
+      <div className="text-9xl font-extrabold">
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 p-12">
+          GeoPass
+        </span>
       </div>
-      <div className="flex no-wrap h-16 bg-indigo-500 items-center">
+      </div>
+      <div className="flex no-wrap h-16 bg-gradient-to-r from-pink-500 to-violet-500 items-center">
         <div className="grow m-4 text-white justify-left">
-          <div className="inline text-4xl">GeoPass</div>
-          <div className="text-xl text-gray-300 inline mx-4">
+          <div className="text-2xl text-gray-100 inline mx-4">
             Preserving location privacy for individuals and helping Smart Cities thrive
           </div>
         </div>
         <div className="flex-none justify-right">
-          <div className="p-1 m-2 bg-red-600">
-            Project Updates!
-          </div>
+          <Link to="/updates">
+            <div className="p-2 m-2 bg-pink-500 rounded-lg outline outline-offset-2 outline-pink-500">
+              Project Updates!
+            </div>
+          </Link>
         </div>
       </div>
 
       <div className="flex no-wrap">
-        <div className="flex-none p-4 text-xl font-bold">Problem Description</div>
-        <div className="grow">
+        <div className="flex-none p-4 text-xl font-bold m-8">The Problem</div>
+        <div className="grow m-4 text-lg">
           <p>
             Location information drives much of the context for the applications we use on our mobile devices. However, for the features of these apps to work we have to provide our GPS location. When we share this information we are trading our privacy for convenience. This trade-off is not always equitable or worth the cost. Sometimes we have to provide full GPS tracking for applications to function at all, in this case the information about our daily life is revealed in full detail.
           </p>
